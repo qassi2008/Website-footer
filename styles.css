@@ -1,0 +1,129 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eef8ff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+main{
+    flex: 1;
+    text-align: center;
+    align-content: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+footer{
+    background-color: #222;
+    border-top-left-radius: 140px;
+    display: grid;
+    grid-template-columns: 350px repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    position: relative;
+}
+p, a, h4{
+    color: #fff;
+}
+footer .column{
+    padding: 1rem;
+}
+footer .column .logo{
+    min-width: 150px;
+    margin-bottom: 1rem;
+}
+footer .column p{
+    color: #ccc;
+    margin-bottom: 1.2rem;
+    font-size: 1.2rem;
+    text-align: start;
+}
+footer .blur{
+    position: absolute;
+    box-shadow: 60px 0 1000px 100px #00bfff;
+    z-index: -10;
+    left: 0;
+    transform: translateY(-50%);
+}
+footer .column .socials{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+footer .column .socials a{
+    border: 2px solid #ccc;
+    padding: 5px 10px;
+    font-size: 1.6rem;
+    border-radius: 100%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+footer .column .socials a:hover{
+    color: #222;
+    background-color: #00bfff;
+}
+footer .column h4 {
+    color: orange;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    position: relative;
+    display: inline-block; 
+}
+
+footer .column h4::after {
+    content: "";
+    height: 3px;
+    position: absolute;
+    width: 0; 
+    bottom: -5px; 
+    left: 0;
+    background-color: #00bfff;
+    transition: width 0.3s ease; 
+}
+
+footer .column h4:hover::after {
+    width: 100%;  
+}
+
+footer .column > a{
+    display: block;
+    color: #ccc;
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+footer .column > a:hover{
+    color: #00bfff;
+}
+.copyright{
+    background-color: #222;
+    color: #ffff;
+    padding: 1rem;
+    font-size: 1.3rem;
+    text-align: center;
+}
+@media (max-width: 600px){
+    footer .column .logo{
+        max-width: 100px;
+    }
+    footer{
+        grid-template-columns: 1fr;
+    }
+    main{
+        font-size: 1rem;
+    }
+}
+@media (max-width: 400px){
+    footer .column .logo{
+        max-width: 100px;
+    }
+    footer{
+        grid-template-columns: 1fr;
+    }
+    main{
+        font-size: 1rem;
+    }
+}
